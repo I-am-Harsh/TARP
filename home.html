@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href = './css/bootstrap/table.css'>
   </head>
   <body>
   
@@ -55,6 +56,7 @@
                 <li><a href="industries.html">Industries</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="./index.html"> Logout</a></li>
               </ul>
             </nav>
           </div>
@@ -74,14 +76,14 @@
             
 
             <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Nationwide Number Plate Recognition</h1>
-            <p><a href="#more" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
+            <p><a href="#pay" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
 
           </div>
         </div>
       </div>
     </div>  
 
-    <div class="container">
+    <div class="container"  id='pay' style="padding: 20px;">
       <div class="row align-items-center no-gutters align-items-stretch">
         <div class="col-md-4">
           <div class="feature-1 pricing h-100 text-center">
@@ -97,20 +99,21 @@
         <div class="col-md-4">
           <div class="free-quote bg-dark h-100">
             <h2 class="my-4 heading  text-center">Add Cars</h2>
-            <p class="row"></p>
-
-            <p class="row">
-                Enter the number of your car
-                <input type = 'text'  class="form-control border-secondary text-white bg-transparent" placeholder="Plate number">
-            </p>
-            <p class="row">
-                    Enter the name of your car
-                    <input type = 'text'  class="form-control border-secondary text-white bg-transparent" placeholder="Any name">
+            
+      
+            <form method="POST">
+                <p class="row">
+                    Enter the number of your car
+                    <input type = 'text'  class="form-control border-secondary text-white bg-transparent" id='plateNum' placeholder="Plate number" required>
                 </p>
-            <p class="row">
-                <input type="button" value="Add" class="btn btn-primary text-white">
-            </p>
- 
+                <p class="row">
+                        Enter the name of your car
+                        <input type = 'text'  class="form-control border-secondary text-white bg-transparent" id = "carName" placeholder="Any name" required>
+                    </p>
+                <p class="row">
+                    <input type="submit" value="Add" class="btn btn-primary text-white" id = 'button-addon2' onclick="addCar()">
+                </p>
+            </form>
           </div>
         </div>
         <div class="col-md-4">
@@ -119,7 +122,20 @@
               <span class="flaticon-car"></span>
             </div>
             <h2 class="my-4 heading">Active Cars</h2>
-            <p class="row" id = 'hide-this'>
+            <div>
+                <table  class="text-center" id = table style="display: none;">
+                    <th>
+                        Car Name
+                    </th>
+                    <th>
+                        Plate Number
+                    </th>
+                    <th>
+                        Amount 
+                    </th>
+                </table>
+            </div>
+            <p class="row" id='hide-this' style="display: block;">
                 All the added cars will be visible, here.
                 Add cars to see.
             </p>
@@ -196,7 +212,7 @@
     </footer>
   </div>
 
-  <script src = "./js/loginHandle.js"></script>
+  <script src="./js/addCars.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
