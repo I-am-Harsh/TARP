@@ -22,7 +22,7 @@ addCar = () =>{
         cell2.innerHTML = plate;
         // cell3.innerHTML = <p>LMAO</p>
         cell3.innerHTML = 
-        `<a href = './payment.html'> ${amount} </a>`;
+        `<a href = './payment'> ${amount} </a>`;
         
     }
     else{

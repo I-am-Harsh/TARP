@@ -5,9 +5,9 @@ function handleLogin(){
     if(b === 'pass'){
         console.log('Passed -- Logging in');
         // same window
-        window.location ="./home.html";
+        window.location ="./home";
         // different window 
-        // window.open('./home.html');
+        // window.open('./home');
         event.preventDefault();
     }
     else{
