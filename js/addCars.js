@@ -1,3 +1,9 @@
+
+// console.log(email);
+// import {email, pass} from './loginHandle';
+
+console.log(test);
+
 addCar = () =>{
     var plate = document.getElementById('plateNum').value;
     var car = document.getElementById('carName').value;
